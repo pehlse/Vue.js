@@ -13,13 +13,15 @@
         <P><input type="text" v-model="nome"><br>
         <span>{{nome}}</span><!--Para atualização para duas vias-->
         </P>
+        <p>{{senha}}</p>
     </div>
     <script>
        new Vue({
            el: "#app",
            data: {
                nome: "Pedro",
-               link:"https://www.youtube.com/"
+               link:"https://www.youtube.com/",
+               senha:1234
            },
            watch: {
                nome(novoValor){
