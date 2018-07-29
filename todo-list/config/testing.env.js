@@ -1,3 +1,3 @@
 module.exports = {
-    NODE_ENV:`"tenting"`
+    NODE_ENV:`"testing"`
 }
