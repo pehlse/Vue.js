@@ -11,7 +11,6 @@
 <script>
 import InputTask from './components/InputTask'
 import TaskList from './components/TaskList'
-
 export default {
 	name: 'app',
     components:{
