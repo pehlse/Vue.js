@@ -15,13 +15,25 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
 .home{
   text-decoration: none;
   font-size: 16px;
   display: block;
   padding: 5px;
   text-align: center;
+}
+.cepChecker{
+  margin: 20px 0;
+  text-align: center;
+  label{
+    display: block;
+  }
+  input{
+    margin: 20px;
+    height: 2em;
+    padding: 2px;
+  }
 }
 
 </style>
