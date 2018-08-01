@@ -1,11 +1,13 @@
 <template>
     <ul class="todo-list">
-        <li v-for="todo in todoList" :key="todo.id" class="todo"> 
-            <div class="view">
-				<input class="toggle" @click="completeTask(todo)" type="checkbox">
-				<label  v-bind:class="{ 'todo-completed': todo.completed }" >{{ todo.title }}</label>
-			</div>
-        </li>
+		<transition-group name="fade">
+			<li v-for="(todo, index) in sortedTasks" :key="index" class="todo"> 
+				<div class="view">
+					<input class="toggle" @click="completeTask(todo)" type="checkbox">
+					<label  v-bind:class="{ 'todo-completed': todo.completed }" >{{ todo.title }}</label>
+				</div>
+			</li>
+		</transition-group>
     </ul>
 </template>
 
@@ -35,7 +37,13 @@ export default {
     }
 </script>
 
-<style>
+<style lang="less">
+.fade-enter-active, .fade-leave-active{
+	transition: opacity .5s ;
+}
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
 .todo-list {
 	margin: 0;
 	padding: 0;
